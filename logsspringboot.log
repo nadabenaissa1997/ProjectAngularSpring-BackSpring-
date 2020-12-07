@@ -1,0 +1,88 @@
+2020-11-27 20:52:55.989  INFO 13448 --- [restartedMain] t.e.s.AngularspringProjectApplication    : Starting AngularspringProjectApplication using Java 1.8.0_202 on DESKTOP-K4JO7PG with PID 13448 (C:\Users\asus\Documents\workspace-sts-3.8.4.RELEASE\angularspring-Project\target\classes started by asus in C:\Users\asus\Documents\workspace-sts-3.8.4.RELEASE\angularspring-Project)
+2020-11-27 20:52:55.996  INFO 13448 --- [restartedMain] t.e.s.AngularspringProjectApplication    : No active profile set, falling back to default profiles: default
+2020-11-27 20:52:56.355  INFO 13448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-27 20:52:56.356  INFO 13448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-11-27 20:53:00.063  INFO 13448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 20:53:00.344  INFO 13448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 197 ms. Found 1 JPA repository interfaces.
+2020-11-27 20:53:03.299  INFO 13448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-27 20:53:03.385  INFO 13448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-27 20:53:03.386  INFO 13448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-27 20:53:03.722  INFO 13448 --- [restartedMain] o.a.c.c.C.[.[localhost].[/SpringMVC]     : Initializing Spring embedded WebApplicationContext
+2020-11-27 20:53:03.722  INFO 13448 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7364 ms
+2020-11-27 20:53:04.956  INFO 13448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 20:53:05.367  INFO 13448 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 20:53:05.905  WARN 13448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 20:53:06.152  INFO 13448 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-27 20:53:07.314  INFO 13448 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-27 20:53:08.662  INFO 13448 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-11-27 20:53:08.914  INFO 13448 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 20:53:09.410  INFO 13448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-27 20:53:09.922  WARN 13448 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2020-11-27 20:53:09.937  INFO 13448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 20:53:11.329  INFO 13448 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 20:53:11.579  INFO 13448 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-27 20:53:15.750  INFO 13448 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 20:53:15.799  INFO 13448 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 20:53:15.854  INFO 13448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-27 20:53:15.861  INFO 13448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-27 20:53:15.893  INFO 13448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-27 20:53:15.899  INFO 13448 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-27 20:53:15.939  INFO 13448 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-27 20:53:16.069 ERROR 13448 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-11-27 23:25:02.255  INFO 20256 --- [main] e.s.AngularspringProjectApplicationTests : Starting AngularspringProjectApplicationTests using Java 1.8.0_202 on DESKTOP-K4JO7PG with PID 20256 (started by asus in C:\Users\asus\Documents\workspace-sts-3.8.4.RELEASE\angularspring-Project)
+2020-11-27 23:25:02.272  INFO 20256 --- [main] e.s.AngularspringProjectApplicationTests : No active profile set, falling back to default profiles: default
+2020-11-27 23:25:03.201  INFO 20256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 23:25:03.281  INFO 20256 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
+2020-11-27 23:25:04.083  INFO 20256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 23:25:04.190  INFO 20256 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 23:25:04.292  INFO 20256 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-27 23:25:04.567  INFO 20256 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-27 23:25:04.589  WARN 20256 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 23:25:05.259  INFO 20256 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 23:25:05.628  INFO 20256 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 23:25:05.661  INFO 20256 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-27 23:25:05.806  INFO 20256 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 23:25:06.646  INFO 20256 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 23:25:06.661  INFO 20256 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 23:25:06.928  INFO 20256 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 23:25:06.941  INFO 20256 --- [main] e.s.AngularspringProjectApplicationTests : Started AngularspringProjectApplicationTests in 5.188 seconds (JVM running for 6.437)
+2020-11-27 23:25:07.384  INFO 20256 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 23:25:07.387  INFO 20256 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-27 23:25:07.388  INFO 20256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-27 23:25:07.406  INFO 20256 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-27 23:26:30.721  INFO 8268 --- [main] e.s.AngularspringProjectApplicationTests : Starting AngularspringProjectApplicationTests using Java 1.8.0_202 on DESKTOP-K4JO7PG with PID 8268 (started by asus in C:\Users\asus\Documents\workspace-sts-3.8.4.RELEASE\angularspring-Project)
+2020-11-27 23:26:30.725  INFO 8268 --- [main] e.s.AngularspringProjectApplicationTests : No active profile set, falling back to default profiles: default
+2020-11-27 23:26:31.576  INFO 8268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-27 23:26:31.683  INFO 8268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interfaces.
+2020-11-27 23:26:32.536  INFO 8268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-27 23:26:32.639  INFO 8268 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-27 23:26:32.737  INFO 8268 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.23.Final
+2020-11-27 23:26:33.032  INFO 8268 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-11-27 23:26:33.093  WARN 8268 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-27 23:26:33.795  INFO 8268 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-27 23:26:34.199  INFO 8268 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-27 23:26:34.234  INFO 8268 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-11-27 23:26:34.426  INFO 8268 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-27 23:26:35.541  INFO 8268 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-27 23:26:35.552  INFO 8268 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 23:26:35.783  INFO 8268 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-27 23:26:35.792  INFO 8268 --- [main] e.s.AngularspringProjectApplicationTests : Started AngularspringProjectApplicationTests in 5.472 seconds (JVM running for 6.674)
+2020-11-27 23:26:36.247  INFO 8268 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-27 23:26:36.250  INFO 8268 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-27 23:26:36.250  INFO 8268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-27 23:26:36.266  INFO 8268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

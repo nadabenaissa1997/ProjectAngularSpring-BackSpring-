@@ -12,14 +12,11 @@ import tn.esprit.spring.repository.*;
 @Service
 public class CommentServiceImpl implements CommentService{
 	
-   @Autowired
-   
+   @Autowired   
    CommentRepository commentRepository;
    @Autowired
    DomainRepository domainRepository;
    
-   private static final Logger l = Logger.getLogger(DomainServiceImpl.class);
-
 		@Override
 		public int addCommentDom(Comment comment, int idDom) {
 			Domain domain= domainRepository.findById((long) idDom).get();
@@ -39,6 +36,7 @@ public class CommentServiceImpl implements CommentService{
 		public Comment updateCommentByDom(int idCom, Comment comment) {
 			Comment com= commentRepository.findById((long) idCom).get();
 			com.setContent(comment.getContent());
+			commentRepository.save(com);
 			return com;
 		}
 		
@@ -60,7 +58,7 @@ public class CommentServiceImpl implements CommentService{
 		@Override
 		public int addCommentDom(Comment comment) {
 			commentRepository.save(comment);
-			return 0;
+			return 1;
 		}
    
 

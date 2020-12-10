@@ -30,6 +30,9 @@ public class Domain implements Serializable{
 	@Column(name="Dom_Image")
 	private String image;
 	
+	//@Column(name="Dom_Price")
+	//private float price;
+	
 	@JsonIgnore
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="domainComment")
 	private Set<Comment>comments;
@@ -39,6 +42,10 @@ public class Domain implements Serializable{
 	private Set<Test>tests;
 
 
+	@JsonIgnore
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="domainSubscribe")
+	private Set<Subscribe>subscibes;
+	
 public Domain() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -46,7 +53,7 @@ public Domain() {
 
 
 public Domain(long id, String title, String description, String type, int like, String image, Set<Comment> comments,
-		Set<Test> tests) {
+		Set<Test> tests, Set<Subscribe> subscibes) {
 	super();
 	this.id = id;
 	this.title = title;
@@ -56,6 +63,7 @@ public Domain(long id, String title, String description, String type, int like, 
 	this.image = image;
 	this.comments = comments;
 	this.tests = tests;
+	this.subscibes = subscibes;
 }
 
 
@@ -138,6 +146,15 @@ public void setTests(Set<Test> tests) {
 	this.tests = tests;
 }
 
+
+public Set<Subscribe> getSubscibes() {
+	return subscibes;
+}
+
+
+public void setSubscibes(Set<Subscribe> subscibes) {
+	this.subscibes = subscibes;
+}
 
 
 }

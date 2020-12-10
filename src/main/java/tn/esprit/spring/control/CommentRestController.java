@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.spring.entity.Comment;
-import tn.esprit.spring.entity.Domain;
 import tn.esprit.spring.service.CommentService;
 
 @RestController

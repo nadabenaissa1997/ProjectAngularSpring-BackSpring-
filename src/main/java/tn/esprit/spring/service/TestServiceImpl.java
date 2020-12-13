@@ -22,19 +22,6 @@ public class TestServiceImpl implements TestService{
 	@Autowired
 	PropRepository propRepository;
 	
-/*	@Override
-	public List<Proposition> testByDom(int idDom) {
-		List<Test> testDom= new ArrayList<Test>();
-		List<Proposition> Tp =new ArrayList<Proposition>();
-		for(Test test: (List<Test>) testRpository.findAll()){
-			if(test.getDomainTest().getId()==(long)idDom)
-				test.getPropositions().forEach(e->{
-					Tp.add(e);
-					
-				});
-			}
-		return Tp;
-	}*/
 	@Override
 	public List<Test> testByDom(int idDom) {
 		List<Test> testDom= new ArrayList<Test>();
@@ -51,6 +38,14 @@ public class TestServiceImpl implements TestService{
 			}
 		return Tp;
 	}
-	
 
+	@Override
+	public int nbrtestByDom(int idDom) {
+		int nbrQuestion = 0;
+		for(Test test: (List<Test>) testRpository.findAll()){
+			if(test.getDomainTest().getId()==(long)idDom)
+				nbrQuestion++;
+			}
+		return nbrQuestion;
+	}
 }

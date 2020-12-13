@@ -15,6 +15,12 @@ public class DomainRestController {
 	@Autowired
 	DomainService domainService;
 	
+	 @GetMapping("/searchDomain/{search}")
+	 @ResponseBody
+	  public List<Domain> searchDomain(@PathVariable("search")String search) {
+	  return domainService.search(search);
+	  }	 
+	
 	  @PutMapping("/updateDom/{idDom}")
 	  @ResponseBody
 	  public int modifyDomain(@PathVariable("idDom")int idDom, @RequestBody Domain domain) {

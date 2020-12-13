@@ -7,6 +7,6 @@ import tn.esprit.spring.entity.Proposition;
 import tn.esprit.spring.entity.Test;
 
 public interface TestService {
-	//List<Proposition> testByDom(int idDom);
 	List<Test> testByDom(int idDom);
+	int nbrtestByDom(int idDom);
 }

@@ -1,6 +1,7 @@
 package tn.esprit.spring.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.*;
@@ -30,8 +31,16 @@ public class Domain implements Serializable{
 	@Column(name="Dom_Image")
 	private String image;
 	
-	//@Column(name="Dom_Price")
-	//private float price;
+	@Column(name="Dom_Price")
+	private float price;
+	
+	@Temporal (TemporalType.DATE)
+	@Column(name="Dom_dateStart")
+	private Date dateStart;
+	
+	@Temporal (TemporalType.DATE)
+	@Column(name="Dom_dateEnd")
+	private Date dateEnd;
 	
 	@JsonIgnore
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="domainComment")
@@ -52,8 +61,9 @@ public Domain() {
 }
 
 
-public Domain(long id, String title, String description, String type, int like, String image, Set<Comment> comments,
-		Set<Test> tests, Set<Subscribe> subscibes) {
+
+public Domain(long id, String title, String description, String type, int like, String image, float price,
+		Date dateStart, Date dateEnd, Set<Comment> comments, Set<Test> tests, Set<Subscribe> subscibes) {
 	super();
 	this.id = id;
 	this.title = title;
@@ -61,10 +71,50 @@ public Domain(long id, String title, String description, String type, int like, 
 	this.type = type;
 	this.like = like;
 	this.image = image;
+	this.price = price;
+	this.dateStart = dateStart;
+	this.dateEnd = dateEnd;
 	this.comments = comments;
 	this.tests = tests;
 	this.subscibes = subscibes;
 }
+
+
+
+public float getPrice() {
+	return price;
+}
+
+
+
+public void setPrice(float price) {
+	this.price = price;
+}
+
+
+
+public Date getDateStart() {
+	return dateStart;
+}
+
+
+
+public void setDateStart(Date dateStart) {
+	this.dateStart = dateStart;
+}
+
+
+
+public Date getDateEnd() {
+	return dateEnd;
+}
+
+
+
+public void setDateEnd(Date dateEnd) {
+	this.dateEnd = dateEnd;
+}
+
 
 
 public long getId() {

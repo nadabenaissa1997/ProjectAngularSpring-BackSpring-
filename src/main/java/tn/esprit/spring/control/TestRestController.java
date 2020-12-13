@@ -28,6 +28,11 @@ public class TestRestController {
 	  public 	List<Test>   getAllDomain(@PathVariable("idDom")int idDom) {
 		return testService.testByDom(idDom);
 	  }
+	  @GetMapping("/nbrtestByDom/{idDom}")
+	  @ResponseBody
+	  public int  nbrtestByDom(@PathVariable("idDom")int idDom) {
+		return testService.nbrtestByDom(idDom);
+	  }
 	  
 	  
 

@@ -17,11 +17,9 @@ public class DomainServiceImpl implements DomainService{
 @Autowired
 DomainRepository domainRepository;
 
-private static final Logger l = Logger.getLogger(DomainServiceImpl.class);
-
 	@Override
 	public List<Domain> allListDomain() {
-		return (List<Domain>) domainRepository.findAll();
+		return (List<Domain>)domainRepository.findAll();
 	}
 
 	@Override
@@ -34,7 +32,7 @@ private static final Logger l = Logger.getLogger(DomainServiceImpl.class);
 	@Override
 	public List<Domain> listDomainByType(String type) {
 			List<Domain> domainType= new ArrayList<>();
-			for(Domain dom: (List<Domain>) domainRepository.findAll()){
+			for(Domain dom: (List<Domain>)domainRepository.findAll()){
 				if(dom.getType().toUpperCase().equals(type.toUpperCase()))
 					domainType.add(dom);
 			}
@@ -47,6 +45,20 @@ private static final Logger l = Logger.getLogger(DomainServiceImpl.class);
 		dom.setLike(dom.getLike()+1);
 		domainRepository.save(dom);
 		return 1;
+	}
+
+	@Override
+	public List<Domain> search(String search) {
+		List<Domain> domainSearch= new ArrayList<>();
+		for(Domain dom: (List<Domain>)domainRepository.findAll()){
+			if  (dom.getType().toUpperCase().contains(search.toUpperCase())
+					|| (dom.getTitle().toUpperCase().contains(search.toUpperCase())) 
+					|| (dom.getDescription().toUpperCase().contains(search.toUpperCase()))
+					|| (dom.getType().toUpperCase().contains(search.toUpperCase()))) 
+				domainSearch.add(dom);
+		}
+		return domainSearch;
+			
 	}
 
 }
